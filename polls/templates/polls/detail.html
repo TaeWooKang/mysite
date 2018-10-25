@@ -1,0 +1,13 @@
+{{item.question_text}}<br>
+{{item.pub_date}}<br>
+
+<!--{{ item.choice_set.all }}-->
+
+<form action ='{% url "vote" %}' method='post'>
+    {% for place in item.choice_set.all %}
+        <input type='radio' name = 'choice' value="{{place.id}}">
+            {{place.choice_text}}<br>
+    {% endfor %}
+    {% csrf_token %}
+    <input type ='submit' values = '투표'>
+</form>

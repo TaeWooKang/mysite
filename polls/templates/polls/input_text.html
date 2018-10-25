@@ -1,0 +1,8 @@
+<!--{{ item.choice_set.all }}-->
+
+<form action='{% url "add_text" %}' method='post'>
+    <h1>추가할 질문</h1>
+    <input type='text' name='text'>
+    {% csrf_token %}
+    <input type='submit' values='투표'>
+</form>
