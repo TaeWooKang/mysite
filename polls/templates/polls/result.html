@@ -1,11 +1,12 @@
-질문명:{{questino.questino_text}}<br>
+질문명:{{question.question_text}}<br>
 
-
-{% for choice in question.choice_set.all %}
 <ul>
+{% for choice in question.choice_set.all %}
+
     <ii>
         {{choice.choice_text}} --> {{choice.votes}}
     </ii>
 
-</ul>
+
 {% endfor %}
+</ul>

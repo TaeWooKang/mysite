@@ -33,6 +33,7 @@ def add_text(request):
     # q.save()
     return HttpResponse('새 질문 "'+text+'"'+' 입력완료')
 
+
 def result(request,id):
     question = Question.objects.get(pk=id)
     return render(request, 'polls/result.html',{'question':question})
